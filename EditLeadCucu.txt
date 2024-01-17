@@ -1,0 +1,28 @@
+package stepsFour;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.But;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class EditLeadCucu extends BaseClass {
+		
+	
+	@When("Edit Lead is clicked")
+	public void clickEditLead() {
+		System.out.println("Edit lead is clicked");
+	}
+	
+	@Then("Edit Lead page should be displayed")
+	public void editLeadPageDisplayed() {
+		System.out.println("Edit Lead page is displayed");
+		
+	}
+	
+	
+
+}

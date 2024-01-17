@@ -1,0 +1,5 @@
+Feature: Edit Lead 
+
+Scenario: Create Lead test case
+When Edit Lead is clicked
+Then Edit Lead page should be displayed

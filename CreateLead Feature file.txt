@@ -1,0 +1,12 @@
+Feature: Create Lead 
+
+Scenario: Create Lead test case
+Given MyLeads page should be displayed
+When Click Create Lead link
+Then CreateLead page is displayed
+Given Enter the Company name as 'TestLeaf'
+And Enter First name as 'Anu'
+And Enter Last name as 'Raj'
+When Click Create Lead button
+Then Lead is created
+

@@ -1,0 +1,48 @@
+package stepsFour;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.But;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class CreateLeadCucu extends BaseClass{
+		
+	@Given("MyLeads page should be displayed")
+	public void myLeadsPageDisplayed() {
+		System.out.println("My Leads page is displayed");
+	}
+	@When("Click Create Lead link")
+	public void clickCreateLead() {
+		driver.findElement(By.linkText("Create Lead")).click();
+	}
+	@Then("CreateLead page is displayed")
+	public void createLeadPageDisplayed() {
+		System.out.println("Create Lead page is displayed");
+	}
+	@And("Enter the Company name as {string}")
+	public void enterCompanyName(String compName) {
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys(compName);
+	}
+	@And("Enter First name as {string}")
+	public void enterFirstName(String fName) {
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys(fName);
+	}
+	@And("Enter Last name as {string}")
+	public void enterLastName(String lName) {
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys(lName);
+	}
+	@When("Click Create Lead button")
+	public void clickCreateLeadButton() {
+		driver.findElement(By.name("submitButton")).click();
+	}
+	@Then("Lead is created")
+	public void leadCreated() {
+		System.out.println("Lead is created");
+		driver.close();
+	}
+
+}
